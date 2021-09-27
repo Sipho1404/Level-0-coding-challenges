@@ -1,5 +1,6 @@
 
-function maximum(a,b,c){
+
+function maximum(a,b,c,d){
 
     if(a >= b){
         if(a >= c){
@@ -8,23 +9,34 @@ function maximum(a,b,c){
 
         }
         else{
-          
+            
             return c;
         }
     }
-    else{
-        if(b >= c){
-            
+    else if( b >= c){
+        if(b >= d){
+           
             return b;
         }
         else{
             
-            return c;
+            return d;
         }
     }
- 
+    else{
+        if(c >= d){
+            
+            return c;
+        }
+        else{
+            
+            return d;
+        }
+    }
 
 } 
-console.log(maximum(1,2,3));
-console.log(maximum(1,22,3));
+maximum(1,2,3,4);
+maximum(1,22,3,2);
+maximum(14,2,7,8);
+maximum(14,2,15,8);
  
