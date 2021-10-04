@@ -1,9 +1,10 @@
 function compareStrings(string1, string2){
 
-    var newString1 = string1.toLowerCase();
-    var newString2 = string2.toLowerCase();
+    let newString1 = string1.toLowerCase();
+    let newString2 = string2.toLowerCase();
 
-    var newString = "";
+    let newString = "";
+    let newWord = "";
 
     for( var i = 0; i < newString1.length; i++){
         for(var j = 0; j < newString2.length; j++){
@@ -14,8 +15,8 @@ function compareStrings(string1, string2){
         }
     }
     var value=false;
-var newVowel=newString[0];
-var x=0;
+let newVowel=newString[0];
+let x=0;
 for(var i = 0; i < newString.length; i++){
     for(var j = 0; j < newVowel.length; j++){
     if(newString[i]!=newVowel[j])
@@ -29,7 +30,17 @@ for(var i = 0; i < newString.length; i++){
     }
     x=0;
 }
-    console.log("Common Letters: " + newVowel);
+for( var i = 0; i < newVowel.length; i++){
+    if(newVowel.length == 1){
+       newWord = newVowel[i];
+    }
+     else if(i < newVowel.length){
+         newWord += newVowel[i] + ",";
+    }
+    
+ }
+
+ console.log("Vowels = " + newWord);
 }
 
 compareStrings("house", "computers");
