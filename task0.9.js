@@ -21,6 +21,7 @@ function printVowels(stringName){
     let vowels = "";
     let newVowels = "";
     let newWord = "";
+    let finalVowels = "";
     for(var i = 0; i <= newString.length; i++){
        
         vowels += checkVowels(newString[i]); 
@@ -42,16 +43,24 @@ for(var i = 0; i < vowels.length; i++){
     }
     x=0;
 }
-for( var i = 0; i < newVowel.length; i++){
+//for( var i = 0; i < newVowel.length; i++){
    if(newVowel.length == 1){
-      newWord = newVowel[i];
+      finalVowels = newVowel;
    }
-    else if(i < newVowel.length){
+  //  else if(i < newVowel.length){
+      else{
+        for(var i = 0; i < newVowel.length; i++){
         newWord += newVowel[i] + ",";
-   }
+        }
+        for(var i = 0; i <= newWord.length - 2; i++){
+         finalVowels += newWord[i];
 
 }
-console.log("Vowels = " + newWord);
+   }
+
+//}
+
+console.log("Vowels = " + finalVowels);
 }
 
 printVowels("Umuzi");
