@@ -27,6 +27,10 @@ function convertNumToTime(num){
     else if(hours >= 2 && minutes == 0){
         console.log(hours + " hours");
     }
+    else if(minutes == 1){
+        console.log(hours + " hours" + ", "+ minutes + " minute");
+    }
+
     else{
         console.log(hours + " hours" + ", "+ minutes + " minutes");
     }
@@ -38,3 +42,4 @@ convertNumToTime(71);
 convertNumToTime(60);
 convertNumToTime(67);
 convertNumToTime(120);
+convertNumToTime(121);
