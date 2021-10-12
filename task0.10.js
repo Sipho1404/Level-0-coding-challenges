@@ -5,6 +5,7 @@ function compareStrings(string1, string2){
 
     let newString = "";
     let newWord = "";
+    let finalVowel = "";
 
     for( var i = 0; i < newString1.length; i++){
         for(var j = 0; j < newString2.length; j++){
@@ -30,17 +31,21 @@ for(var i = 0; i < newString.length; i++){
     }
     x=0;
 }
-for( var i = 0; i < newVowel.length; i++){
+//for( var i = 0; i < newVowel.length; i++){
     if(newVowel.length == 1){
-       newWord = newVowel[i];
+       finalVowel = newVowel;
     }
-     else if(i < newVowel.length){
+     else{
+        for( var i = 0; i < newVowel.length; i++){
          newWord += newVowel[i] + ",";
-    }
+        }
+        for( var i = 0; i < newWord.length - 1; i++){
+            finalVowel += newWord[i];
+        }
     
  }
 
- console.log("Vowels = " + newWord);
+ console.log("Vowels = " + finalVowel);
 }
 
 compareStrings("house", "computers");
